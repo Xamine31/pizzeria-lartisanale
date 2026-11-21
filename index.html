@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111713" />
+  <meta name="description" content="Pizzeria L’Artisanale à Marseille Saint-Loup. Pizzas artisanales, ingrédients frais et cuisson au feu de bois. Découvrez la carte et retrouvez-nous au 33 boulevard de Saint-Loup." />
+  <meta property="og:title" content="L’Artisanale — Pizzeria à Marseille" />
+  <meta property="og:description" content="Le goût du vrai. Pizzas au feu de bois à Marseille Saint-Loup. Découvrez notre carte." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/menu-original.jpg" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <title>L’Artisanale — Pizzeria Marseille Saint-Loup</title>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="header" id="haut">
+    <div class="container header-inner">
+      <a href="#haut" class="brand" aria-label="L’Artisanale, accueil"><span class="brand-symbol">✳</span><span>L’<strong>ARTISANALE</strong><small>PIZZERIA · MARSEILLE</small></span></a>
+      <nav class="nav" id="navigation" aria-label="Navigation principale">
+        <a href="#savoir-faire">Notre savoir-faire</a><a href="#carte">La carte</a><a href="#offre">Nos offres</a><a href="#contact">Nous trouver</a>
+      </nav>
+      <a class="nav-cta" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/G8UmLvWUZPcLYAsS8">Itinéraire <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-controls="navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="live-dot"></span> MARSEILLE · SAINT-LOUP</div>
+          <h1 id="hero-title">La pizza, <em>comme on l’aime.</em></h1>
+          <p>Une pâte préparée avec soin, des ingrédients frais et le caractère unique de la cuisson au feu de bois. Bienvenue chez <strong>L’Artisanale.</strong></p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#carte">Découvrir la carte <span>↗</span></a><a class="btn btn-outline" href="#contact">Nous trouver <span>↗</span></a></div>
+          <div class="hero-meta"><span><b>🔥</b> Cuisson au feu de bois</span><i></i><span><b>📍</b> Marseille 10e</span></div>
+        </div>
+        <div class="hero-art reveal" aria-label="Illustration d'une pizza artisanale garnie">
+          <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div>
+          <img src="assets/pizza-artisanale.svg" alt="Pizza artisanale garnie de tomates, mozzarella et basilic" fetchpriority="high" />
+          <span class="hero-stamp">FAIT AVEC <strong>♡</strong><br />À MARSEILLE</span>
+          <span class="hero-caption">L’ART DE LA <strong>BONNE PIZZA</strong></span>
+        </div>
+      </div>
+      <div class="hero-bottom"><div class="container hero-bottom-inner"><span>AUTHENTIQUE. GÉNÉREUSE. ARTISANALE.</span><span>FAITES DÉFILER ↓</span></div></div>
+    </section>
+
+    <section class="features" id="savoir-faire"><div class="container">
+      <div class="section-intro reveal"><span class="section-kicker">LA DIFFÉRENCE ARTISANALE</span><h2>Le goût des <em>bonnes choses.</em></h2><p>Une cuisine généreuse, préparée avec des produits choisis pour le plaisir de bien manger.</p></div>
+      <div class="features-grid">
+        <article class="feature-card reveal"><span class="feature-icon">♨</span><div class="feature-num">01 /</div><h3>Au feu de bois</h3><p>Une cuisson traditionnelle qui donne à nos pizzas leur caractère et leur saveur.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">✳</span><div class="feature-num">02 /</div><h3>Des ingrédients frais</h3><p>Légumes frais, fromages AOP et une sauce tomate préparée à partir de tomates italiennes.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">♡</span><div class="feature-num">03 /</div><h3>Une pâte maison</h3><p>Une pâte préparée de façon traditionnelle, avec de l’huile d’olive et du savoir-faire.</p></article>
+      </div>
+    </div></section>
+
+    <section class="menu-section" id="carte"><div class="container">
+      <div class="menu-heading reveal"><div><span class="section-kicker">DE QUOI VOUS RÉGALER</span><h2>Notre <em>carte.</em></h2><p>Sauce blanche ou sauce rouge ? À vous de choisir votre favorite.</p></div><button class="text-link" type="button" id="open-menu">Voir le menu original <span>↗</span></button></div>
+      <div class="filter-row" role="group" aria-label="Filtrer les pizzas"><button class="filter active" data-filter="all" aria-pressed="true">Toutes les pizzas</button><button class="filter" data-filter="blanche" aria-pressed="false">Sauce blanche</button><button class="filter" data-filter="rouge" aria-pressed="false">Sauce rouge</button></div>
+      <div id="pizza-grid" class="pizza-grid" aria-live="polite"></div>
+      <div class="menu-note"><span>✳</span> Prix et compositions retranscrits depuis le menu fourni. Ils peuvent évoluer : vérifiez sur place.</div>
+      <div class="menu-photo-cta reveal"><div><span class="section-kicker">LA CARTE COMPLÈTE</span><h3>Envie de voir <em>toutes</em> nos pizzas ?</h3><p>Retrouvez le menu original avec l’ensemble des recettes et tarifs.</p><button class="btn btn-primary" type="button" id="open-menu-bottom">Afficher le menu en photo ↗</button></div><button class="menu-thumb" id="open-menu-thumb" type="button" aria-label="Agrandir le menu"><img src="assets/menu-original.jpg" loading="lazy" alt="Photographie de la carte originale de la Pizzeria L’Artisanale" /><span>Cliquer pour agrandir ↗</span></button></div>
+    </div></section>
+
+    <section class="offer-section" id="offre"><div class="container offer-inner reveal"><div class="offer-emblem">✳<span>OFFRE<br/>GOURMANDE</span></div><div class="offer-copy"><span class="section-kicker">À PARTAGER (OU PAS)</span><h2>3 pizzas achetées.<br /><em>1 soda offert.</em></h2><p>Pour 3 pizzas achetées, profitez d’un soda de 1,5 L offert ! Offre indiquée sur notre carte.</p></div><a href="#carte" class="btn btn-dark">Choisir mes pizzas ↗</a></div></section>
+
+    <section class="visit-section" id="contact"><div class="container visit-grid"><div class="visit-copy reveal"><span class="section-kicker">ON VOUS ATTEND</span><h2>Rendez-vous <em>à Saint-Loup.</em></h2><p>Une envie de pizza ce soir ? Retrouvez-nous au cœur du 10e arrondissement de Marseille.</p><div class="info-box"><span class="info-icon">↗</span><div><strong>Notre adresse</strong><p>33 boulevard de Saint-Loup<br />13010 Marseille, France</p></div></div><div class="info-box"><span class="info-icon">◷</span><div><strong>Horaires indiqués</strong><p>Mardi — dimanche : 18 h – 22 h<br />Lundi : fermé</p><small>Horaires issus de l’annuaire, à confirmer avant déplacement.</small></div></div><div class="visit-actions"><a class="btn btn-primary" href="https://maps.app.goo.gl/G8UmLvWUZPcLYAsS8" target="_blank" rel="noopener noreferrer">Ouvrir Google Maps ↗</a><a class="text-link" href="https://top-pizzeria.fr/annuaire/f/pizzeria-l-artisanale" target="_blank" rel="noopener noreferrer">Voir notre fiche ↗</a></div></div><div class="visit-map reveal"><div class="map-pattern"></div><div class="map-route"></div><div class="map-pin"><span>✳</span></div><div class="map-label"><strong>L’Artisanale</strong><small>33 Bd de Saint-Loup · Marseille</small></div><a href="https://maps.app.goo.gl/G8UmLvWUZPcLYAsS8" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir l'itinéraire vers la pizzeria">Itinéraire sur Maps ↗</a></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-top"><div><a href="#haut" class="brand footer-brand"><span class="brand-symbol">✳</span><span>L’<strong>ARTISANALE</strong><small>PIZZERIA · MARSEILLE</small></span></a><p>Des pizzas généreuses. Un vrai savoir-faire.<br />Un petit bout de bonheur à Marseille.</p></div><div class="footer-links"><a href="#savoir-faire">Savoir-faire</a><a href="#carte">La carte</a><a href="#offre">Nos offres</a><a href="#contact">Nous trouver</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Pizzeria L’Artisanale. Tous droits réservés.</span><span>Fait avec ♥ à Marseille</span></div></footer>
+  <dialog id="menu-dialog" class="menu-dialog" aria-label="Carte originale de la pizzeria"><div class="dialog-bar"><span>Notre carte originale</span><button id="close-menu" type="button" aria-label="Fermer le menu">✕</button></div><div class="dialog-image"><img src="assets/menu-original.jpg" alt="Menu complet de la Pizzeria L’Artisanale, avec les prix, ingrédients et offre promotionnelle" /></div><p>Vous pouvez zoomer sur l’image depuis votre navigateur.</p></dialog>
+</body>
+</html>
