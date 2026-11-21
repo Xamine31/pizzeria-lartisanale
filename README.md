@@ -1,6 +1,6 @@
 # Pizzeria L’Artisanale — Site officiel (projet)
 
-Site statique responsive, prêt pour GitHub Pages. Aucune installation de Node.js ni de base de données requise.
+Site statique responsive, optimisé pour mobile et prêt pour GitHub Pages. Aucune installation de Node.js ni de base de données requise.
 
 ## Publier avec GitHub Pages
 
@@ -15,8 +15,15 @@ Site statique responsive, prêt pour GitHub Pages. Aucune installation de Node.j
 - `styles.css` : couleurs, mise en page et responsive.
 - `script.js` : recettes, prix et filtres du menu.
 - `assets/logo-artisanale.svg` : logo redessiné en vectoriel à partir de la photo fournie.
-- `assets/menu-original.jpg` : photo du menu fournie par le client.
 - `assets/pizza-four.webp` : visuel de pizza adapté de la maquette générée.
+
+## Corrections de la version mobile
+
+- Navigation mobile optimisée (bouton tactile, fermeture au clic, à Échap et après sélection).
+- Boutons, filtres et cartes de pizzas réorganisés pour les petits écrans.
+- Hero et promotion repositionnés pour ne pas gêner la lecture.
+- Espacements ajustés sur mobile et tablette, sans défilement horizontal.
+- Section et bouton du menu en photo retirés.
 
 ## À vérifier avant mise en ligne
 

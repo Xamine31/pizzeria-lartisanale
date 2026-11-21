@@ -47,6 +47,14 @@ renderPizzas();
 const toggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('navigation');
 toggle.addEventListener('click',()=>{const isOpen=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(isOpen));toggle.setAttribute('aria-label',isOpen?'Fermer le menu':'Ouvrir le menu');});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Ouvrir le menu');}));
+function closeMobileMenu(){
+  nav.classList.remove('open');
+  toggle.setAttribute('aria-expanded','false');
+  toggle.setAttribute('aria-label','Ouvrir le menu');
+}
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMobileMenu));
+document.addEventListener('keydown', e=>{if(e.key==='Escape')closeMobileMenu();});
+document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!toggle.contains(e.target))closeMobileMenu();});
+window.addEventListener('resize',()=>{if(window.innerWidth>850)closeMobileMenu();});
 document.getElementById('year').textContent = new Date().getFullYear();
 if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
