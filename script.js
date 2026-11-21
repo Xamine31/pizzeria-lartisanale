@@ -44,10 +44,6 @@ filters.forEach(btn => btn.addEventListener('click', () => {
   renderPizzas(btn.dataset.filter);
 }));
 renderPizzas();
-const dialog = document.getElementById('menu-dialog');
-['open-menu','open-menu-bottom','open-menu-thumb'].forEach(id => document.getElementById(id)?.addEventListener('click',() => dialog.showModal()));
-document.getElementById('close-menu').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
 const toggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('navigation');
 toggle.addEventListener('click',()=>{const isOpen=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(isOpen));toggle.setAttribute('aria-label',isOpen?'Fermer le menu':'Ouvrir le menu');});
