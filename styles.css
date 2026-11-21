@@ -90,3 +90,7 @@ button,a{-webkit-tap-highlight-color:transparent}
   .hero-buttons .btn{font-size:10px}
   .filter{font-size:9px}
 }
+
+/* Ajustements pour la carte destinée aux clients */
+.pizza-bottom{justify-content:flex-end}
+.menu-section .pizza-grid{margin-bottom:42px}

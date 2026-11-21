@@ -37,7 +37,7 @@ const formatPrice = n => `${n.toFixed(2).replace('.', ',')} €`;
 function renderPizzas(filter='all') {
   const entries = pizzas.filter(p => filter === 'all' || p.type === filter);
   document.getElementById('pizza-count').textContent = `${entries.length} pizzas`;
-  grid.innerHTML = entries.map(p => `<article class="pizza-card"><div class="pizza-top"><span class="pizza-type ${p.type}">${p.type === 'blanche' ? 'SAUCE BLANCHE' : 'SAUCE ROUGE'}</span>${p.tag ? `<span class="pizza-tag">${p.tag}</span>` : ''}</div><h3>${p.name}</h3><p>${p.ingredients}</p><div class="pizza-bottom"><span>Préparée avec soin</span><strong>${formatPrice(p.price)}</strong></div></article>`).join('');
+  grid.innerHTML = entries.map(p => `<article class="pizza-card"><div class="pizza-top"><span class="pizza-type ${p.type}">${p.type === 'blanche' ? 'SAUCE BLANCHE' : 'SAUCE ROUGE'}</span>${p.tag ? `<span class="pizza-tag">${p.tag}</span>` : ''}</div><h3>${p.name}</h3><p>${p.ingredients}</p><div class="pizza-bottom"><strong>${formatPrice(p.price)}</strong></div></article>`).join('');
 }
 filters.forEach(btn => btn.addEventListener('click', () => {
   filters.forEach(b => {b.classList.toggle('active',b===btn);b.setAttribute('aria-pressed',String(b===btn));});
